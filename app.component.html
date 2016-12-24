@@ -1,0 +1,37 @@
+
+
+<div class="container">
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="name" #nameRes="ngModel" required class="form-control" name="name" ngModel >
+    <div [hidden]="nameRes.valid || nameRes.pristine" class=" alert alert-danger " >
+     Please enter a name 
+    </div>
+  </div>
+  <div class="form-group">
+    <label >Email</label>
+    <input type="text" #emailRes="ngModel" required class="form-control" name="email" ngModel >
+    <div [hidden]="emailRes.valid || emailRes.pristine" class=" alert alert-danger " >
+     Please enter a Email 
+    </div>
+  </div>
+  <div class="form-group">
+    <label >Street</label>
+    <input type="text" #streetRes="ngModel" required  class="form-control" name="street" ngModel >
+    <div [hidden]="streetRes.valid || streetRes.pristine" class=" alert alert-danger " >
+     Please enter a Street 
+    </div>
+  </div>
+   <div class="form-group">
+    <label >City</label>
+    <input type="text" #cityRes="ngModel"  required  class="form-control" name="city" ngModel  >
+    <div [hidden]="cityRes.valid || cityRes.pristine" class=" alert alert-danger " >
+     Please enter a City 
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
